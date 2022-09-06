@@ -9,7 +9,7 @@
     <td><%= book_comment.comment %></td>
 
     <% if book_comment.user == current_user %>
-      <td><%= link_to "削除", book_book_comment_path(book_comment.book, book_comment), method: :delete, class: "btn-sm btn-danger" %></td>
+      <td><%= link_to "削除", book_book_comment_path(book_comment.book, book_comment), method: :delete, class: "btn-sm btn-danger", remote: true %></td>
     <% end %>
   </tr>
 <% end %>
